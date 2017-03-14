@@ -1,0 +1,8 @@
+C:\Users\yonah\OneDrive\Documents\סמסטר ב 5777\עקרונות שפות תוכנה\פתרונות\0\Problem0\Problem0\bin\Debug\Problem0.exe.config
+C:\Users\yonah\OneDrive\Documents\סמסטר ב 5777\עקרונות שפות תוכנה\פתרונות\0\Problem0\Problem0\bin\Debug\Problem0.XML
+C:\Users\yonah\OneDrive\Documents\סמסטר ב 5777\עקרונות שפות תוכנה\פתרונות\0\Problem0\Problem0\bin\Debug\Problem0.exe
+C:\Users\yonah\OneDrive\Documents\סמסטר ב 5777\עקרונות שפות תוכנה\פתרונות\0\Problem0\Problem0\bin\Debug\Problem0.pdb
+C:\Users\yonah\OneDrive\Documents\סמסטר ב 5777\עקרונות שפות תוכנה\פתרונות\0\Problem0\Problem0\bin\Debug\FSharp.Core.dll
+C:\Users\yonah\OneDrive\Documents\סמסטר ב 5777\עקרונות שפות תוכנה\פתרונות\0\Problem0\Problem0\bin\Debug\FSharp.Core.xml
+C:\Users\yonah\OneDrive\Documents\סמסטר ב 5777\עקרונות שפות תוכנה\פתרונות\0\Problem0\Problem0\obj\Debug\Problem0.exe
+C:\Users\yonah\OneDrive\Documents\סמסטר ב 5777\עקרונות שפות תוכנה\פתרונות\0\Problem0\Problem0\obj\Debug\Problem0.pdb
