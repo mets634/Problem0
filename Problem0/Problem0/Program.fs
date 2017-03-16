@@ -2,11 +2,6 @@
 open System.Text.RegularExpressions
 
 
-(*A function that does:
-1) Copies the content of 
-file "hello.vm" to "hello.asm".
-2) Prints every line in "hello.mv" 
-that contains the work 'you'.*)
 let hello_mv (dir:DirectoryInfo) = 
     // find "hello.vm" file
     let hello_file = dir.GetFiles() |> 
@@ -14,11 +9,8 @@ let hello_mv (dir:DirectoryInfo) =
 
     let reg_you = @"^*.\byou\b.*$" // the regular expression to match each line with
 
-    // filter out all lines that do not
-    // contain the word "you" and print 
-    // the rest of the lines 
     File.ReadAllLines(hello_file.FullName) |> // read every line
-    Array.filter (fun line -> Regex.IsMatch(line, reg_you)) |> // check if contains word "you"
+    Array.filter (fun line -> Regex.IsMatch(line, reg_you)) |> // filter out if does not contains word "you"
     Array.iter (fun line -> printfn "%s" line)  // print to stdout
 
     // set "hello.vm" and "hello.asm" paths
@@ -30,15 +22,13 @@ let hello_mv (dir:DirectoryInfo) =
     File.WriteAllText(hello_asm_path, hello_text) // write text to hello.asm
 
 
-(*A function to add an incrementing value
-to the end of each file with .vm extension*)
 let add_counter (dir:DirectoryInfo) = 
     // append to the end of each .vm file 
     // the index of that file in the array
 
     dir.GetFiles() 
     |> Array.filter (fun file -> file.Extension = ".vm")  // get all files with ".vm" extension
-    |> Array.iteri (fun index file -> File.AppendAllText(file.FullName, index.ToString()))
+    |> Array.iteri (fun index file -> File.AppendAllText(file.FullName, index.ToString()))  // append index of file to file
     
 
 
