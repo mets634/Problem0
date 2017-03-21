@@ -1,8 +1,9 @@
-﻿open System.IO
+﻿open System
+open System.IO
 open System.Text.RegularExpressions
 
 
-let hello_mv (dir:DirectoryInfo) = 
+let HelloVM (dir:DirectoryInfo) = 
     // find "hello.vm" file
     let hello_file = dir.GetFiles() |> 
                         Array.find(fun file -> file.Name = "hello.vm")
@@ -22,7 +23,7 @@ let hello_mv (dir:DirectoryInfo) =
     File.WriteAllText(hello_asm_path, hello_text) // write text to hello.asm
 
 
-let add_counter (dir:DirectoryInfo) = 
+let AddCounter (dir:DirectoryInfo) = 
     // append to the end of each .vm file 
     // the index of that file in the array
 
@@ -36,8 +37,8 @@ let add_counter (dir:DirectoryInfo) =
 let main argv = 
     try 
         let dir = new DirectoryInfo(argv.[0]) // get directory files
-        add_counter dir
-        hello_mv dir
-    with _ as ex -> printfn "ERROR: \n\n%s" (ex.ToString ())
+        AddCounter dir
+        HelloVM dir
+    with _ as ex -> Console.Error.WriteLine("ERROR: \n\n{0}", ex.ToString ())
 
     0 // EXIT_SUCCESS
